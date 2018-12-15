@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.Profile {
+  background-position: 50% 40%;
+  background-size: 50vw auto;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) brightness(50%);
+  font-size: 32px;
+  height: 14.28vh;
+  margin: 0 auto;
+  padding: 5vmin;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+  width: 50vw;
+  z-index: 9999;
+}
+
+.Profile:hover,
+.Profile:focus {
+  cursor: pointer;
+  filter: grayscale(0%) brightness(100%) !important;
+  outline: none;
+}
+
+.memberLabel,
+.memberInfo {
+  display: none;
+}
+
+.memberInfo {
+  float: right;
+  font-size: initial;
+}
+
+#BTSLogo {
+  top: 20vh;
+  left: 3vw;
+  padding: 10vmin;
+  position: fixed;
+}
+
+#BTSLogo img {
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+#BTSLogo img:hover {
+  filter: grayscale(0%) saturate(200%);
+}
+
+#Background-S {
+  width: 30vw;
+  height: 100vh;
+  background-image: url("../img/Background-S.png");
+  background-position: 0px -50vh;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.25s ease;
+}
+
+#Background-S:hover {
+  filter: drop-shadow(0 0 2px white);
+}
+
+@media only screen and (max-width: 650px) {
+  .Profile {
+    background-size: 100vw auto;
+    width: 100vw;
+  }
+  
+  #BTSLogo {
+    top: 0;
+    left: 0;
+    text-align: center;
+    position: relative;
+  }
+
+  #Background-S {
+    width: 100vw;
+    background-position: 25vw -25vh;
+  }
+
+}
