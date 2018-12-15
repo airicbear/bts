@@ -1,6 +1,4 @@
-# BTS
-
-<img src="./img/BTSLogoBlack.svg" height="200">
+<img src="./img/BTSLogo2.svg" height="200">
 
 ## Motivation
 
