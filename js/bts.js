@@ -98,7 +98,7 @@ function Profile(memberName = "Jungkook") {
   div.appendChild(info);
 
   // Profile image
-  div.style.backgroundImage = "url('../img/" + memberName + ".png')";
+  div.style.backgroundImage = "url('./img/" + memberName + ".png')";
 
   // Open profile
   div.onclick = () => {
