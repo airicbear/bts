@@ -1,6 +1,6 @@
 # BTS
 
-<img src="./img/BTSLogo.svg" height="200" style="filter: invert(100%)">
+<img src="./img/BTSLogoBlack.svg" height="200">
 
 ## Motivation
 
