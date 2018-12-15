@@ -22,6 +22,10 @@ body {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   transition: all 0.25s ease;
   width: 50vw;
+}
+
+#BTS,
+#BTS * {
   z-index: 9999;
 }
 
@@ -69,6 +73,7 @@ body {
   top: 0;
   right: 0;
   transition: all 0.25s ease;
+  z-index: -1;
 }
 
 #Background-S:hover {
@@ -90,7 +95,7 @@ body {
 
   #Background-S {
     width: 100vw;
-    background-position: 25vw -25vh;
+    background-position: 10vw -25vh;
   }
 
 }
