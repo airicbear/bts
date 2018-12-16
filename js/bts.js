@@ -67,7 +67,7 @@ function Info(memberName, infoList = btsInfo) {
   for (let info in memberInfo) {
     let p = Text(info.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1").replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    }) + ": " + memberInfo[info]);
+    }) + ": " + memberInfo[info], info, memberName + info);
     div.appendChild(p);
   }
   return div;
@@ -108,7 +108,7 @@ function Profile(memberName = "Jungkook") {
   div.style.backgroundImage = "url('./img/" + memberName + ".png')";
 
   // Open profile
-  div.onclick = () => {
+  let showMember = () => {
     toggle(div, document.body.getElementsByClassName("Profile"));
     setTimeout(() => {
       div.scrollIntoView({
@@ -118,15 +118,17 @@ function Profile(memberName = "Jungkook") {
     }, 100);
   }
 
+  div.addEventListener("click", showMember);
+
   // Make profiles focusable
-  // div.onfocus = () => div.onclick();
+  // div.addEventListener("focus", showMember);
   div.tabIndex = 0;
 
   return div;
 }
 
 function Profiles(memberList = btsMembers) {
-  let div = Div("BTS");
+  let div = Div("BTS", "wrapper");
   for (let i = 0; i < memberList.length; i++) {
     let member = Profile(memberList[i]);
     div.appendChild(member);
