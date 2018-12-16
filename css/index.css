@@ -42,8 +42,12 @@ body {
 }
 
 .memberInfo {
+  bottom: 0;
+  right: 5vmin;
+  position: absolute;
   float: right;
   font-size: initial;
+  max-width: 32%;
 }
 
 #BTSLogo {

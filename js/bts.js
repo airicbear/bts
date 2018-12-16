@@ -11,30 +11,37 @@ let btsMembers = [
 let btsInfo = {
   "V": {
     "name": "Kim Tae Hyung (김태형)",
+    "role": "Dancer, Vocalist, Visual",
     "birthday": "December 30, 1995",
   },
   "Suga": {
     "name": "Min Yoon Gi (민윤기)",
+    "role": "Rapper",
     "birthday": "March 9, 1993",
   },
   "Jungkook": {
     "name": "Jeon Jeong-guk (전정국)",
+    "role": "Dancer, Vocalist, Visual",
     "birthday": "September 1, 1997",
   },
   "RM": {
     "name": "Kim Nam Joon (김남준)",
+    "role": "Leader, Rapper",
     "birthday": "September 12, 1994",
   },
   "J-Hope": {
     "name": "Jung Ho Seok (정호석)",
+    "role": "Dancer, Rapper",
     "birthday": "February 18, 1994",
   },
   "Jimin": {
     "name": "Park Ji Min (박지민)",
+    "role": "Dancer, Vocalist",
     "birthday": "October 13, 1995",
   },
   "Jin": {
     "name": "Kim Seok Jin (김석진)",
+    "role": "Visual, Vocalist",
     "birthday": "December 4, 1992",
   },
 }
@@ -66,7 +73,7 @@ function Info(memberName, infoList = btsInfo) {
   return div;
 }
 
-function toggle(member, members, initHeight = "14vh") {
+function toggle(member, members, initHeight = (100 / btsMembers.length) + "vh") {
   let hideMember = (member) => {
     member.style.height = initHeight;
     member.style.filter = "grayscale(100%) brightness(50%)";
