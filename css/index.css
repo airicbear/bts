@@ -4,9 +4,8 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.75);
-  color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
-  margin: 0;
+  margin: 0 0 25vh 0;
   overflow-x: hidden;
 }
 
@@ -14,26 +13,31 @@ body {
   background-position: 50% 40%;
   background-size: 50vw auto;
   background-repeat: no-repeat;
+  border: none;
+  color: transparent;
+  display: block;
   filter: grayscale(100%) brightness(50%);
   font-size: 32px;
   height: 14.28vh;
   margin: 0 auto;
-  padding: 5vmin;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   transition: all 0.25s ease;
   width: 50vw;
 }
 
-#BTS,
-#BTS * {
-  z-index: 9999;
+.Profile > * {
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .Profile:hover,
 .Profile:focus {
   cursor: pointer;
-  filter: grayscale(0%) brightness(100%) !important;
+  filter: grayscale(0%) brightness(100%);
   outline: none;
+}
+
+.Profile:focus {
+  filter: grayscale(0%) brightness(100%) !important;
 }
 
 .memberLabel,
@@ -41,16 +45,32 @@ body {
   display: none;
 }
 
+.memberLabel {
+  top: 0;
+  left: 0;
+  padding-left: 5vmin;
+  position: absolute;
+}
+
 .memberInfo {
   background-color: rgba(0, 0, 0, 0.1);
   bottom: 0;
-  border-radius: 20% 0 0 0;
+  border-radius: 15% 0 0 0;
   right: 0;
   position: absolute;
   float: right;
   font-size: initial;
   max-width: 35%;
-  padding: 0 2vmin 0 2vmin;
+  padding: 0 2vmin;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.memberInfo:active,
+.memberInfo:focus,
+.memberInfo:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 
 #BTSLogo {
@@ -63,18 +83,19 @@ body {
 #BTSLogo img {
   filter: grayscale(100%);
   transition: all 0.5s ease;
-  z-index: 1;
 }
 
-#BTSLogo img:hover {
+#BTSLogo img:hover,
+#BTSLogo img:focus {
   filter: grayscale(0%) saturate(200%);
+  outline: none;
 }
 
 #Background-S {
   width: 30vw;
   height: 100vh;
   background-image: url("../img/Background-S.png");
-  background-position: 0px -50vh;
+  background-position: 0px -40vh;
   background-repeat: no-repeat;
   position: fixed;
   top: 0;
