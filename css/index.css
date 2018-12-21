@@ -22,6 +22,7 @@ body {
   margin: 0 auto;
   transition: all 0.25s ease;
   width: 50vw;
+  opacity: 0.95;
 }
 
 .Profile > * {
@@ -36,6 +37,7 @@ body {
   outline: none;
 }
 
+.Profile:focus-within,
 .Profile:focus {
   filter: grayscale(0%) brightness(100%) !important;
 }
@@ -108,7 +110,26 @@ body {
   filter: drop-shadow(0 0 2px white);
 }
 
+@keyframes intro {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 650px) {
+  @keyframes intro {
+    from {
+      opacity: 0;
+      width: 0;
+      margin-left: 0;
+    } to {
+      opacity: 1;
+      width: 100vw;
+      margin-left: 0;
+    }
+  }
   .Profile {
     background-size: 100vw auto;
     width: 100vw;

@@ -98,7 +98,6 @@ function Info(memberName, infoList = btsInfo) {
 
 function showMember(member) {
   member.style.height = "50vh";
-  member.style.filter = "grayscale(0%) brightness(100%)";
   document.getElementById(member.id + "Label").style.display = "inline";
   document.getElementById(member.id + "Info").style.display = "inline";
   member.collapsed = false;
@@ -139,6 +138,7 @@ function toggle(member, members) {
 function Profile(memberName = "Jungkook") {
   let button = Button(memberName, "Profile");
   button.textContent = memberName + " Profile";
+  button.collapsed = true;
 
   // Profile text
   let label = Text(memberName, "memberLabel", memberName + "Label");
@@ -168,6 +168,7 @@ function Profiles(memberList = btsMembers) {
   let div = Div("BTS", "wrapper");
   for (let i = 0; i < memberList.length; i++) {
     let member = Profile(memberList[i]);
+    member.style.animation = "intro " + Math.log(i + 2) + "s";
     div.appendChild(member);
   }
   return div;
